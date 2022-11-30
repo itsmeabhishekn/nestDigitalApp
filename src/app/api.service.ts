@@ -8,11 +8,19 @@ export class ApiService {
 
   constructor(private http:HttpClient) {}
 
+  addFriends = (dataToSend:any) => {
+    return this.http.post("https://dummyapifriends.herokuapp.com/adddata",dataToSend)
+  }
+
   fetchFriends = ()=>
   {
     return this.http.get("https://dummyapifriends.herokuapp.com/view")
   }
 
+  addCourse = (dataToSend:any) => {
+    return this.http.post("https://mylinkurcodesapp.herokuapp.com/addcourse",dataToSend)
+
+}
  
   fetchCourses = () => 
   {

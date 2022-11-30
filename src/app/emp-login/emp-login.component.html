@@ -8,19 +8,19 @@
                     <h1>Employee Login</h1>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Username</label>
-                    <input type="text" class="form-control">
+                    <label for="" class="form-label">Employee ID</label>
+                    <input type="text" name="empid" [(ngModel)]="empid" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <input type="password" name="password" [(ngModel)]="password"  id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-success" routerLink="/add">Login </button>
+                    <button class="btn btn-success" (click)="readValues()">Login </button>
                 </div>
 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <a href=""> new employee ? Click here </a>
+                    <a routerLink="/empadd"> new employee ? Click here </a>
                 </div>
             </div>
         </div>
