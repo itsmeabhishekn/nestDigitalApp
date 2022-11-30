@@ -13,6 +13,9 @@ import { ViewFriendsComponent } from './view-friends/view-friends.component';
 import { LogoutNavComponent } from './logout-nav/logout-nav.component';
 import { EmpLoginComponent } from './emp-login/emp-login.component';
 import { EmpAddComponent } from './emp-add/emp-add.component';
+import { AddCFComponent } from './add-cf/add-cf.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { AddFriendComponent } from './add-friend/add-friend.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { EmpAddComponent } from './emp-add/emp-add.component';
     ViewFriendsComponent,
     LogoutNavComponent,
     EmpLoginComponent,
-    EmpAddComponent
+    EmpAddComponent,
+    AddCFComponent,
+    AddCourseComponent,
+    AddFriendComponent
   ],
   imports: [
     BrowserModule,
