@@ -16,6 +16,21 @@ import { EmpAddComponent } from './emp-add/emp-add.component';
 import { AddCFComponent } from './add-cf/add-cf.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { AddFriendComponent } from './add-friend/add-friend.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+const myRoute : Routes = [
+  {path:"",component:HomeViewComponent},
+  {path:"adminlogin",component:AdminLoginComponent},
+  {path:"adminhome",component:AdminHomeComponent},
+  {path:"viewcourses",component:ViewCourseComponent},
+  {path:"viewfriends",component:ViewFriendsComponent},
+  {path:"emplogin",component:EmpLoginComponent},
+  {path:"empadd",component:EmpAddComponent},
+  {path:"addcourse",component:AddCourseComponent},
+  {path:"addfriend",component:AddFriendComponent},
+  {path:"empsuccess",component:AddCFComponent}
+]
 
 @NgModule({
   declarations: [
@@ -37,7 +52,9 @@ import { AddFriendComponent } from './add-friend/add-friend.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
