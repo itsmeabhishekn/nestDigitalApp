@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { CarousalComponent } from './carousal/carousal.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeViewComponent,
     CarousalComponent,
-    NavMainComponent
+    NavMainComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
