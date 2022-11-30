@@ -10,6 +10,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { ViewCourseComponent } from './view-course/view-course.component';
 import { ViewFriendsComponent } from './view-friends/view-friends.component';
+import { LogoutNavComponent } from './logout-nav/logout-nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ViewFriendsComponent } from './view-friends/view-friends.component';
     AdminLoginComponent,
     AdminHomeComponent,
     ViewCourseComponent,
-    ViewFriendsComponent
+    ViewFriendsComponent,
+    LogoutNavComponent
   ],
   imports: [
     BrowserModule,
