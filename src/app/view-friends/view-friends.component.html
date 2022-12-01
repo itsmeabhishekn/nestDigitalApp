@@ -4,22 +4,48 @@
   <div class="row">
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <div class="row g-3">
-          <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000" class="card-img-top" alt="...">
-              <p class="card-text">Id:{{i._id}}</p>
-                <h5 class="card-title">Name:{{i.name}}</h5>
-                <p class="card-text">Friend Name:{{i.friendName}}</p>
-                <p class="card-text">Friend Nick Name:{{i.friendNickName}}</p>
-                <p class="card-text">Describe your Friend:{{i.DescribeYourFriend}}</p>
-              </div>
-            </div>
+        
+<ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+
+<ng-template #loadingScreen>
+
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      
+
+</ng-template>
+
+
+<ng-template #dataScreen>
+
+
+
+    <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+        <div class="card">
+          <div class="card-body">
+            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000" class="card-img-top" alt="...">
+          <p class="card-text">Id:{{i._id}}</p>
+            <h5 class="card-title">Name:{{i.name}}</h5>
+            <p class="card-text">Friend Name:{{i.friendName}}</p>
+            <p class="card-text">Friend Nick Name:{{i.friendNickName}}</p>
+            <p class="card-text">Describe your Friend:{{i.DescribeYourFriend}}</p>
           </div>
+        </div>
+      </div>
+
+</ng-template>
+
+
         </div>
     </div>
   </div>
 </div>
+
+
 
 
 

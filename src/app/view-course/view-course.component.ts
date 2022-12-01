@@ -14,11 +14,15 @@ export class ViewCourseComponent {
 
       api.fetchCourses().subscribe(
         (response) => {
+          this.loading=false;
+          console.log(response)
           this.data = response;
         }
       )
   
     }
     data: any = []
+
+    loading:boolean = true
   
 }

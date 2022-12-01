@@ -11,10 +11,13 @@ export class ViewFriendsComponent {
   {
     api.fetchFriends().subscribe(
       (response) => {
+        this.loading=false
+        console.log(response)
         this.data = response
       }
     )
   }
-  
+  loading:boolean = true
+
     data:any=[]
 }
