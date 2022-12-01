@@ -18,6 +18,9 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { AddFriendComponent } from './add-friend/add-friend.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 const myRoute : Routes = [
   {path:"",component:HomeViewComponent},
@@ -29,7 +32,10 @@ const myRoute : Routes = [
   {path:"empadd",component:EmpAddComponent},
   {path:"addcourse",component:AddCourseComponent},
   {path:"addfriend",component:AddFriendComponent},
-  {path:"empsuccess",component:AddCFComponent}
+  {path:"empsuccess",component:AddCFComponent},
+  {path:"gallery",component:GalleryComponent},
+  {path:"aboutus",component:AboutusComponent},
+  {path:"contactus",component:ContactusComponent}
 ]
 
 @NgModule({
@@ -47,7 +53,10 @@ const myRoute : Routes = [
     EmpAddComponent,
     AddCFComponent,
     AddCourseComponent,
-    AddFriendComponent
+    AddFriendComponent,
+    GalleryComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
